@@ -11,13 +11,12 @@ export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
+    vanillaExtractPlugin(),
     dts({
       include: ["lib"],
       insertTypesEntry: true,
-      rollupTypes: true,
       tsconfigPath: "./tsconfig.app.build.json",
     }),
-    vanillaExtractPlugin(),
   ],
   build: {
     copyPublicDir: false,

@@ -1,17 +1,17 @@
 {
   "name": "sentoke-ui",
   "private": false,
-  "version": "0.0.0-test",
+  "version": "0.0.0-test01",
   "type": "module",
   "main": "./dist/sentoke-ui.js",
-  "module": "./dist/sentoke-ui.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/sentoke-ui.js"
+      "import": "./dist/sentoke-ui.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
