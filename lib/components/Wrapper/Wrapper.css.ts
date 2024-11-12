@@ -1,6 +1,6 @@
 import { createTheme, fallbackVar, style } from "@vanilla-extract/css";
 
-import { breakpoints } from "../global.css";
+import { breakpoints } from "../../global.css.ts";
 
 export const [, vars] = createTheme({
   padding: "",

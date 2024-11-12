@@ -4,13 +4,17 @@ import { resolve } from "path";
 import dts from "vite-plugin-dts";
 import react from "@vitejs/plugin-react";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    libInjectCss(),
     dts({
       include: ["lib"],
+      insertTypesEntry: true,
+      rollupTypes: true,
       tsconfigPath: "./tsconfig.app.build.json",
     }),
     vanillaExtractPlugin(),
@@ -18,7 +22,7 @@ export default defineConfig({
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
+      entry: resolve(__dirname, "lib/index.ts"),
       formats: ["es"],
     },
     rollupOptions: {

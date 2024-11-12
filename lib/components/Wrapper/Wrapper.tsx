@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
-import type { Color } from "../types";
+import type { Color } from "../../types.ts";
 
-import { globalCss, Radius } from "../global.css";
-import { className, vars } from "./Wrapper.css";
+import { globalCss, Radius } from "../../global.css.ts";
+import { className, vars } from "./Wrapper.css.ts";
 
 interface WrapperProps extends React.HTMLProps<HTMLDivElement> {
   r?: Radius;
