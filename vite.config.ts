@@ -25,12 +25,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: [
-        "react",
-        "react/jsx-runtime",
-        "@vanilla-extract/css",
-        "@vanilla-extract/dynamic",
-      ],
+      external: ["react", "react-dom", "react/jsx-runtime"],
     },
   },
 });
