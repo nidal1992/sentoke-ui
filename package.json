@@ -1,7 +1,7 @@
 {
   "name": "sentoke-ui",
   "private": false,
-  "version": "0.0.0-test01",
+  "version": "0.0.0-test02",
   "type": "module",
   "main": "./dist/sentoke-ui.js",
   "types": "./dist/index.d.ts",
@@ -22,31 +22,8 @@
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@vanilla-extract/css": "^1.16.0",
-    "@vanilla-extract/dynamic": "^2.1.2",
-    "clsx": "^2.1.1"
-  },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vanilla-extract/vite-plugin": "^4.0.17",
-    "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
-    "json": "^11.0.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10",
-    "vite-plugin-dts": "^4.3.0",
-    "vite-plugin-lib-inject-css": "^2.1.1"
   }
 }
