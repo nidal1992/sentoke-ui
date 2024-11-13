@@ -1,31 +1,21 @@
 import clsx from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
-import type { Color } from "../../types.ts";
-
-import { globalCss, Radius } from "../../global.css.ts";
+import { WrapperProps } from "./Wrapper.props.ts";
+import { globalCss } from "../../global.css.ts";
 import { className, vars } from "./Wrapper.css.ts";
 
-interface WrapperProps extends React.HTMLProps<HTMLDivElement> {
-  r?: Radius;
-  rm?: Radius;
-  bgCol?: Color;
-  bgColMob?: Color;
-  p?: string;
-  pm?: string;
-}
-
-export const Wrapper = ({
+export const Wrapper: React.FC<WrapperProps> = ({
+  style,
+  children,
+  className: classNameProp,
   p = "20px",
   pm = undefined,
   r = "radiusB",
   rm = undefined,
   bgCol = "c900",
   bgColMob = undefined,
-  style,
-  children,
-  className: classNameProp,
-}: WrapperProps) => {
+}) => {
   return (
     <div
       className={clsx(className, classNameProp)}
