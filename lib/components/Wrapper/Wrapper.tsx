@@ -1,11 +1,13 @@
 import clsx from "clsx";
+import { createElement } from "react";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
-import { WrapperProps } from "./Wrapper.props.ts";
 import { globalCss } from "../../global.css.ts";
+import { WrapperProps } from "./Wrapper.props.ts";
 import { className, vars } from "./Wrapper.css.ts";
 
 export const Wrapper: React.FC<WrapperProps> = ({
+  tag,
   style,
   children,
   className: classNameProp,
@@ -16,10 +18,11 @@ export const Wrapper: React.FC<WrapperProps> = ({
   bgCol = "c900",
   bgColMob = undefined,
 }) => {
-  return (
-    <div
-      className={clsx(className, classNameProp)}
-      style={{
+  return createElement(
+    tag || "div",
+    {
+      className: clsx(className, classNameProp),
+      style: {
         ...assignInlineVars({
           [vars.padding]: p,
           [vars.paddingMob]: pm,
@@ -31,9 +34,8 @@ export const Wrapper: React.FC<WrapperProps> = ({
           [vars.backgroundColorMob]: bgColMob && globalCss.color[bgColMob],
         }),
         ...style,
-      }}
-    >
-      {children}
-    </div>
+      },
+    },
+    children,
   );
 };

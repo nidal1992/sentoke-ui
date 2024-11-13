@@ -1,10 +1,10 @@
 import "./App.css";
-import { Wrapper } from "sentoke-ui";
+import { Wrapper } from "../lib";
 
 function App() {
   return (
-    <Wrapper bgCol={"primary"} r={"radiusB"} pm={"10px"}>
-      asdfasdf
+    <Wrapper tag={"section"} bgCol={"c600"} r={"radiusB"} pm={"10px"}>
+      Wrapper
     </Wrapper>
   );
 }

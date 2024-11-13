@@ -1,5 +1,5 @@
 import { Radius } from "../../global.css.ts";
-import type { Color } from "../../types.ts";
+import type { Color, ContainerTag } from "../../types.ts";
 
 export interface WrapperProps extends React.HTMLProps<HTMLDivElement> {
   r?: Radius;
@@ -8,4 +8,5 @@ export interface WrapperProps extends React.HTMLProps<HTMLDivElement> {
   bgColMob?: Color;
   p?: string;
   pm?: string;
+  tag?: ContainerTag;
 }
