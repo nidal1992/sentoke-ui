@@ -1,11 +1,17 @@
 import "./App.css";
 import { Wrapper } from "../lib";
+import { Flex } from "../lib/components/Flex";
 
 function App() {
   return (
-    <Wrapper tag={"section"} bgCol={"c600"} r={"radiusB"} pm={"10px"}>
-      Wrapper
-    </Wrapper>
+    <Flex gap={"10px"}>
+      <Wrapper bgCol={"c300"} r={"radiusB"}>
+        Box1
+      </Wrapper>
+      <Wrapper bgCol={"c300"} r={"radiusB"}>
+        Box2
+      </Wrapper>
+    </Flex>
   );
 }
 

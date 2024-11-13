@@ -13,13 +13,16 @@ export type Color =
   | "success";
 
 export type Device = "mob" | "tab" | "desc";
+
 export type ContainerTag =
   | "div"
   | "section"
   | "headers"
   | "footer"
   | "main"
+  | "form"
   | "ul";
+
 export type TextTag =
   | "div"
   | "h1"
