@@ -7,19 +7,19 @@ import { WrapperProps } from "./Wrapper.props.ts";
 import { className, vars } from "./Wrapper.css.ts";
 
 export const Wrapper: React.FC<WrapperProps> = ({
-  tag,
-  style,
-  children,
-  className: classNameProp,
+  tag = "div",
   p = "20px",
   pm = undefined,
   r = "radiusB",
   rm = undefined,
   bgCol = "c900",
   bgColMob = undefined,
+  style,
+  children,
+  className: classNameProp,
 }) => {
   return createElement(
-    tag || "div",
+    tag,
     {
       className: clsx(className, classNameProp),
       style: {
